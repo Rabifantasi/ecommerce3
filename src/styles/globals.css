@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-secondary text-gray-800;
+}
+
+h1, h2, h3 {
+  @apply font-serif;
+}
+
+button {
+  @apply rounded-lg transition-colors duration-300;
+}
+
+a {
+  @apply text-primary hover:text-accent;
+}

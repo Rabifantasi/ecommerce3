@@ -1,19 +1,21 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#4A8B9D', // Adjust as needed
+        secondary: '#F7F4E9', // Adjust as needed
+        accent: '#D9C6A1', // Adjust as needed
+      },
+      fontFamily: {
+        sans: ['Helvetica Neue', 'Poppins', 'sans-serif'],
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
+}
